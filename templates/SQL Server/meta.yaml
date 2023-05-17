@@ -1,0 +1,33 @@
+name: Microsoft SQL Server
+description: Microsoft SQL Server is a relational database management system developed by Microsoft.
+instructions: null
+changeLog:
+  - date: 2023-05-17
+    description: first release
+links:
+  - label: Website
+    url: https://www.microsoft.com/en-us/sql-server
+  - label: Github
+    url: https://github.com/Microsoft/mssql-docker
+contributors:
+  - name: TechedJack
+    url: https://github.com/TechedJack
+schema:
+  type: object
+  required:
+    - appServiceImage
+    - MSSQL_PID
+    - MSSQL_SA_PASSWORD
+  properties:
+    appServiceImage:
+      type: string
+      title: App Service Image
+      default: mcr.microsoft.com/mssql/server:2017-latest
+    MSSQL_PID:
+      type: string
+      title: MSSQL PID
+      default: developer
+    MSSQL_SA_PASSWORD:
+      type: string
+      title: SA Password
+      default: P@ssw0rd
